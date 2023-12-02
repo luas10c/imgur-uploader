@@ -5,7 +5,12 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['prettier', 'plugin:@typescript-eslint/recommended', 'next'],
+  extends: [
+    'prettier',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:tailwindcss/recommended',
+    'next'
+  ],
   plugins: ['prettier', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
