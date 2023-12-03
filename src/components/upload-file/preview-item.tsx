@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { toast } from 'react-hot-toast'
 
+import { formatBytes } from '#/utils/format-bytes'
+
 interface Props {
   file: File
 }
@@ -54,7 +56,7 @@ export const PreviewItem = (props: Props) => {
             <header>
               <h2 className="text-sm font-semibold text-zinc-200">{props.file.name}</h2>
               <span className="text-xs font-medium text-zinc-400">
-                {(props.file.size / 1024).toFixed(1)}Kb
+                {formatBytes(props.file.size)}
               </span>
             </header>
           </div>
