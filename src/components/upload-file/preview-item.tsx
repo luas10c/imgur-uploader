@@ -40,7 +40,7 @@ export const PreviewItem = (props: Props) => {
     <div>
       <div className="flex h-16 items-center justify-between">
         <div className="flex items-center">
-          <div className="flex min-h-[300px] items-center space-x-4">
+          <div className="flex items-center space-x-4">
             <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg bg-pink-500/10">
               <svg
                 viewBox="0 0 120 120"
