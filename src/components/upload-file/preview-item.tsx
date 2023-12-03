@@ -17,17 +17,18 @@ export const PreviewItem = (props: Props) => {
     try {
       setLoading(true)
       const body = new FormData()
-      body.append('image', file)
+      body.append('file', file)
 
       const response = await fetch('/api/upload', {
         method: 'POST',
         body
       })
-      const { data } = await response.json()
+      const data = await response.json()
       toast.success('O arquivo foi carregado com sucesso!')
-      setURL(data.link)
+      setURL(data.previewURL)
     } catch (error) {
-      toast.error(error)
+      console.log(error.message)
+      toast.error(error.message)
     } finally {
       setLoading(false)
     }
