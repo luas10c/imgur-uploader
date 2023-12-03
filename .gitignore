@@ -4,3 +4,7 @@ node_modules
 build
 out
 dist
+
+# env files
+.env*
+!.env.example
