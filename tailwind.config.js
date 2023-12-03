@@ -2,7 +2,11 @@
 const config = {
   content: ['src/**/*.tsx'],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        sans: 'var(--font-inter)'
+      }
+    }
   },
   plugins: []
 }
